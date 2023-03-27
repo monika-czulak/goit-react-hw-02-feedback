@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class FeedbackOptions extends Component {
   render() {
@@ -6,7 +7,7 @@ class FeedbackOptions extends Component {
     function capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    
+
     const { options, onLeaveFeedback } = this.props;
     return (
       <div>
@@ -24,9 +25,9 @@ class FeedbackOptions extends Component {
   }
 }
 
-// FeedbackOptions.propTypes = {
-//   options: PropTypes.object.isRequired,
-//   onLeaveFeedback: PropTypes.func.isRequired,
-// };
+FeedbackOptions.propTypes = {
+  options: PropTypes.object.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
 
 export default FeedbackOptions;
